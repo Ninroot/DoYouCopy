@@ -1,0 +1,79 @@
+{
+  "messages": [
+    {
+      "id": 0,
+      "author": "Ninroot",
+      "content": "Hello, what do you want to do ?",
+      "responses": [
+        {
+          "content": "Start the story",
+          "path": "http://noodle.com",
+          "id": 1,
+          "delay": 0.5
+        },
+        {
+          "content": "Pouet2",
+          "path": "http://noodle.com",
+          "id": 2,
+          "delay": 0.5
+        },
+        {
+          "content": "Pouet3",
+          "id": 3,
+          "delay": 0.5
+        },
+        {
+          "content": "Pouet4",
+          "path": "http://noodle.com",
+          "id": 4,
+          "delay": 0
+        },
+        {
+          "content": "Pouet",
+          "path": "http://noodle.com",
+          "id": 5,
+          "delay": 1
+        },
+        {
+          "content": "Pouet",
+          "id": 6
+        },
+        {
+          "visible": true,
+          "content": "Pouet Visible",
+          "id": 7
+        },
+        {
+          "visible": false,
+          "content": "Pouet Not Visible",
+          "id": 8
+        },
+        {
+          "content": "Bad...",
+          "id": 9,
+          "delay": 0.5
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "author": "Ninroot",
+      "content": "Good let's begin the story...",
+      "delay": 2.5,
+      "responses": [
+        {
+          "content": "Ok",
+          "path": "http://noodle.com",
+          "id": 2,
+          "delay": 0.5
+        },
+        {
+          "content": "Nope",
+          "path": "http://noodle.com",
+          "id": 0,
+          "delay": 0.5
+        }
+      ]
+    }
+  ]
+}
