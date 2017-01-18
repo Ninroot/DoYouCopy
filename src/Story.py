@@ -6,7 +6,6 @@ from pprint import pprint
 from urllib.request import urlopen
 
 import time
-
 import sys
 
 from src.Message import Message
@@ -70,23 +69,14 @@ class Story:
         story = json.load(file)
         # pprint(message)
         while True:
-            message = Message()
             try:
-                message = story['messages'][self.location_id]  # 0 at the beginning
+                message = Message(story['messages'][self.location_id])
             except Exception:
                 print('This message does not exist')
-            try:
-                author = str(message['author'])  # why not message.author ?
-            except Exception:
-                author = '?'
-            print('<{}> '.format(author), end='')
-            try:
-                content = message['content']
-            except Exception:
-                content = '???'
-            print(content)
-            x = 0
-            for response in message['responses']:
+            print('<{}> '.format(message.author), end='')
+            print('{}'.format(message.content))
+            x = 0;
+            for response in message.responses:
                 print(str(x) + ': ' + response['content'])
                 x += 1
-            self.evaluate(message['responses'])
+            self.evaluate(message.responses)
